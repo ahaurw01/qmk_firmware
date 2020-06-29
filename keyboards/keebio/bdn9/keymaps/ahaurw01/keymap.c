@@ -45,23 +45,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 };
 
-void encoder_update_user(uint8_t index, bool clockwise) {
+void encoder_update_user(uint8_t index, bool counterclockwise) {
     if (index == _LEFT) {
-        if (clockwise) {
+        if (!counterclockwise) {
             tap_code(KC_VOLU);
         } else {
             tap_code(KC_VOLD);
         }
     }
     else if (index == _MIDDLE) {
-        if (clockwise) {
+        if (!counterclockwise) {
             tap_code(KC_DOWN);
         } else {
             tap_code(KC_UP);
         }
     }
     else if (index == _RIGHT) {
-        if (clockwise) {
+        if (!counterclockwise) {
             tap_code(KC_PGDN);
         } else {
             tap_code(KC_PGUP);
