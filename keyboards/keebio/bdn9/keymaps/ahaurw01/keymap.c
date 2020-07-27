@@ -25,12 +25,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /*
         | Knob 1: Vol Dn/Up |             | Knob 2: Page Dn/Up |
         | Press: Mute       | Cmd-Shift-A | Press: Play/Pause  |
-        | Hold: Layer 2     | Up          | RGB Mode           |
+        | Hold: Layer 2     | Up          | Cmd-Ctrl-Shift-4   |
         | Left              | Down        | Right              |
      */
     [0] = LAYOUT(
         KC_MUTE, G(S(KC_A)), KC_MPLY,
-        MO(1)  , KC_UP  , RGB_MOD,
+        MO(1)  , KC_UP  , G(C(S(KC_4))),
         KC_LEFT, KC_DOWN, KC_RGHT
     ),
     /*
